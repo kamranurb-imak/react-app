@@ -3,6 +3,7 @@ import Users from "../pages/Users";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
+import Counter from "../pages/Counter";
 
 function RoutePath() {
   return (
@@ -17,6 +18,16 @@ function RoutePath() {
           </ProtectedRoute>
         }
       />
+
+      <Route
+        path="/counter"
+        element={
+          <ProtectedRoute>
+            <Counter />
+          </ProtectedRoute>
+        }
+      />
+
       <Route path="*" element={<Home />} />
     </Routes>
   );

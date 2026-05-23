@@ -60,6 +60,15 @@ function Header() {
                     ) : null}
 
                     {isLoggedIn ? (
+                        <NavLink
+                            to="/counter"
+                            className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+                        >
+                            Counter
+                        </NavLink>
+                    ) : null}
+
+                    {isLoggedIn ? (
                         <button className="auth-button logout-button" onClick={handleLogout}>
                             Logout
                         </button>
